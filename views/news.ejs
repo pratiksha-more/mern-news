@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Website</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="main container flex">
+        <a href="/" class="logo">
+          pratiksha news
+          <!-- <img src="news-removebg-preview.png" alt="" /> -->
+        </a>
+        <div class="item1">
+          <ul class="flex">
+            <li class="nav-item">
+              <a href="/upload">upload</a>
+            </li>
+            <!-- <li class="nav-item" onclick="onNavItemClick('finance')">
+              <a href="#">Finance</a>
+            </li>
+            <li class="nav-item" onclick="onNavItemClick('politics')">
+              <a href="#">Politics</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="item2 flex">
+          <input type="text" placeholder="eg. Education" id="search-text" />
+          <button id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1><%= news.headline %></h1>
+      <p>
+        <%= news.content %>
+      </p>
+    </main>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    p {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    a {
+      text-transform: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin-inline: auto;
+      overflow: hidden;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      position: fixed;
+      background: rgba(41, 0, 128, 0.3);
+      box-shadow: 0 0 10px gray;
+      top: 0;
+      z-index: 99;
+      left: 0;
+      right: 0;
+    }
+
+    .main {
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .logo img {
+      width: 150px;
+      height: 60px;
+    }
+
+    .item1 ul {
+      gap: 20px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .nav-item:hover {
+      cursor: pointer;
+      color: red;
+    }
+
+    .item2 button,
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      margin-right: 10px;
+      border: none;
+    }
+
+    .item2 input {
+      width: 20vw;
+    }
+
+    .item2 button {
+      background-color: rgba(0, 42, 255, 0.295);
+      color: white;
+      padding: 8px 12px;
+    }
+
+    .item2 button:hover {
+      background-color: rgba(0, 0, 255, 0.964);
+    }
+
+    main {
+      padding-block: 20px;
+      margin-top: 100px;
+      padding: 10px;
+      /* justify-content: center; */
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      margin: 10px;
+      box-sizing: border-box;
+      background-color: #fff;
+      min-height: 400px;
+      box-shadow: 0 0 4px #d4ecff;
+      border-radius: 4px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #f9f9f900;
+      box-shadow: 1px 1px 8px #d4d4d460;
+      transform: translateY(-2px);
+    }
+
+    .card-image img {
+      width: 100%;
+      object-fit: cover;
+      height: 180px;
+    }
+
+    .news-card {
+      padding: 10px;
+    }
+
+    .news-head,
+    .news-source {
+      margin-block: 15px;
+    }
+  </style>
+</html>
